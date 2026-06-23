@@ -7,7 +7,11 @@
       "content": "# What SHAP values actually tell you (and what they don't)\n\nSHAP (SHapley Additive exPlanations) has become the go-to tool for explaining ML model predictions. But there's a gap between what practitioners think SHAP shows them and what it actually computes.\n\n## What SHAP does well\n\nSHAP gives you a consistent, theoretically grounded way to attribute a model's prediction to each input feature. The math is solid — it's rooted in cooperative game theory.\n\n## What it doesn't tell you\n\nSHAP explains the model, not the data-generating process. A high SHAP value for a feature doesn't mean that feature causes the outcome — it means the model relied on it. Those are very different things.\n\n*This is a draft — expand with your own project experience.*",
       "cover_image": "",
       "published": false,
-      "tags": ["Machine Learning", "Explainability", "SHAP"]
+      "tags": [
+        "Machine Learning",
+        "Explainability",
+        "SHAP"
+      ]
     },
     {
       "title": "Building my first RAG pipeline: lessons learned",
@@ -16,7 +20,11 @@
       "content": "# Building my first RAG pipeline: lessons learned\n\nRAG (Retrieval-Augmented Generation) sounds straightforward in theory. In practice, there are at least five ways things can go wrong before you get a useful answer out of it.\n\n## The chunking problem\n\nHow you split your documents matters more than which embedding model you use. Too small and you lose context. Too large and retrieval becomes noisy.\n\n*This is a draft — expand with your own experience from the Document Q&A Assistant project.*",
       "cover_image": "",
       "published": false,
-      "tags": ["Generative AI", "LangChain", "RAG"]
+      "tags": [
+        "Generative AI",
+        "LangChain",
+        "RAG"
+      ]
     },
     {
       "title": "Notes from a discrete mathematics deep-dive",
@@ -25,7 +33,28 @@
       "content": "# Notes from a discrete mathematics deep-dive\n\nWhen I started my IT degree, discrete mathematics felt like the most abstract, least practical course on the syllabus. A year into building ML projects, I keep running into it.\n\n## Graph theory → Graph Neural Networks\n\nEvery GNN paper assumes you're comfortable with adjacency matrices, degree sequences, and the handshaking lemma. That's pure discrete math.\n\n*This is a draft — expand with specific examples from your studies.*",
       "cover_image": "",
       "published": false,
-      "tags": ["Mathematics", "Machine Learning", "Study Notes"]
+      "tags": [
+        "Mathematics",
+        "Machine Learning",
+        "Study Notes"
+      ]
+    },
+    {
+      "published": true,
+      "title": "Why I Chose Data Science and AI: The Beginning of Neural Arch",
+      "summary": "Tracing the origins of curiosity, intelligence, and the journey into AI.",
+      "content": "Artificial intelligence has always fascinated me, not just because of what it can do, but because of what it reveals about intelligence itself. Behind every intelligent system lies data, patterns, and decisions, and that same curiosity is what led me into the world of Data Science.\n\nI have always been a fairly nonchalant student, but over time I began building the foundation for a passion-driven career path. Being an undergraduate in Information Technology helped me realize what truly connects me to everything I’m curious about. As I explored different paths, I discovered the one that felt most aligned with me, which ultimately became my reason for specializing in Data Science.\n\nAI has always been an ongoing concept in my mind. I wanted to understand what it truly is, and more importantly, the mechanisms behind this thing we call intelligence.\n\nThroughout my childhood, I had a deep passion for Mathematics. That passion naturally shaped my curiosity toward pattern recognition, prediction, and logical problem-solving. As I entered university, I began connecting those interests with technology, which deepened my excitement for areas like **Natural Language Processing (NLP), Generative AI, and intelligent systems**.\n\n**Neural Arch**—*Tracing the Arch of Intelligence*—is my personal brand. It represents my journey of understanding how intelligence forms, evolves, and can be recreated through data and machine learning. There’s also a personal layer to it: the initials **N.A.** reflect my own name, making it both a technical vision and a personal identity.\n\nThrough this blog, I’ll document my projects, experiments, lessons, and discoveries as I continue building my path in the world of AI and Data Science.\n\nThis is only the beginning.",
+      "date": "2026-06-23",
+      "cover_image": "/assets/images/uploads/1-blog.jpg",
+      "tags": [
+        "Data Science",
+        "Artificial Intelligence",
+        "Machine Learning",
+        "Neural Arch",
+        "Personal Journey",
+        "NLP",
+        "Generative AI"
+      ]
     }
   ]
 }
