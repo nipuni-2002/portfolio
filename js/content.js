@@ -138,7 +138,11 @@ async function loadBlogPosts(containerId) {
     const data = await res.json();
     const published = (data.posts || []).filter(p => p.published);
     if (!published.length) {
-      el.innerHTML = `<p class="lede text-center" style="margin-inline:auto;opacity:.7;">No published posts yet — write your first article in the admin panel.</p>`;
+      el.innerHTML = `
+        <div style="grid-column:1/-1;text-align:center;padding:3rem 0;">
+          <p style="font-family:var(--font-mono);font-size:.85rem;color:var(--terracotta);margin-bottom:.5rem;">No published posts yet.</p>
+          <p style="font-size:.9rem;opacity:.6;">Head to the <a href="/admin" style="color:var(--maroon);border-bottom:1px solid var(--terracotta);">admin panel</a>, open your post, toggle <strong>Published → ON</strong>, and hit Publish.</p>
+        </div>`;
       return;
     }
     el.innerHTML = published.map((post, i) => blogCard(post, i)).join('');
