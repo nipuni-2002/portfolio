@@ -1,0 +1,204 @@
+{
+  "projects": [
+    {
+      "title": "Customer Churn Predictor",
+      "category": "ml",
+      "description": "Gradient-boosted model predicting subscription churn with SHAP-based explainability for stakeholders.",
+      "stack": ["Python", "XGBoost", "SHAP"],
+      "image": "",
+      "demo_url": "#",
+      "github_url": "#",
+      "featured": true
+    },
+    {
+      "title": "Sentiment Insight Engine",
+      "category": "nlp",
+      "description": "Transformer-based sentiment & topic classifier for product reviews, deployed as a lightweight API.",
+      "stack": ["BERT", "FastAPI", "Docker"],
+      "image": "",
+      "demo_url": "#",
+      "github_url": "#",
+      "featured": true
+    },
+    {
+      "title": "Climate Trends Dashboard",
+      "category": "viz",
+      "description": "Interactive dashboard visualizing two decades of regional climate data with anomaly detection overlays.",
+      "stack": ["D3.js", "Pandas", "Plotly"],
+      "image": "",
+      "demo_url": "#",
+      "github_url": "#",
+      "featured": true
+    },
+    {
+      "title": "Document Q&A Assistant",
+      "category": "genai",
+      "description": "RAG pipeline letting users query large PDF archives in natural language with cited sources.",
+      "stack": ["LangChain", "Claude API", "Pinecone"],
+      "image": "",
+      "demo_url": "#",
+      "github_url": "#",
+      "featured": true
+    },
+    {
+      "title": "Energy Demand Forecaster",
+      "category": "ml",
+      "description": "Time-series forecasting system for grid demand using LSTM and weather covariates.",
+      "stack": ["TensorFlow", "LSTM", "AWS"],
+      "image": "",
+      "demo_url": "#",
+      "github_url": "#",
+      "featured": true
+    },
+    {
+      "title": "University Admissions Analytics",
+      "category": "viz",
+      "description": "End-to-end analysis pipeline uncovering enrollment trends to support faculty planning decisions.",
+      "stack": ["SQL", "Power BI", "Python"],
+      "image": "",
+      "demo_url": "#",
+      "github_url": "#",
+      "featured": true
+    },
+    {
+      "title": "Resume Screening Classifier",
+      "category": "ml",
+      "description": "NLP-driven model ranking resumes against job descriptions fairly.",
+      "stack": ["scikit-learn", "spaCy", "Flask"],
+      "image": "",
+      "demo_url": "#",
+      "github_url": "#",
+      "featured": false
+    },
+    {
+      "title": "News Topic Clustering",
+      "category": "nlp",
+      "description": "Unsupervised clustering of daily news into emergent topic groups.",
+      "stack": ["BERTopic", "UMAP", "Streamlit"],
+      "image": "",
+      "demo_url": "#",
+      "github_url": "#",
+      "featured": false
+    },
+    {
+      "title": "Retail Demand Heatmaps",
+      "category": "viz",
+      "description": "Geo-visualized retail demand patterns across regional store networks.",
+      "stack": ["Folium", "GeoPandas", "Python"],
+      "image": "",
+      "demo_url": "#",
+      "github_url": "#",
+      "featured": false
+    },
+    {
+      "title": "AI Story Generator",
+      "category": "genai",
+      "description": "Fine-tuned generative model producing short stories from prompts.",
+      "stack": ["GPT fine-tune", "PyTorch"],
+      "image": "",
+      "demo_url": "#",
+      "github_url": "#",
+      "featured": false
+    },
+    {
+      "title": "Credit Risk Scoring Model",
+      "category": "ml",
+      "description": "Interpretable credit risk model balancing accuracy and fairness.",
+      "stack": ["LightGBM", "Fairlearn"],
+      "image": "",
+      "demo_url": "#",
+      "github_url": "#",
+      "featured": false
+    },
+    {
+      "title": "Chatbot for Course FAQs",
+      "category": "genai",
+      "description": "Retrieval-augmented chatbot answering university course queries.",
+      "stack": ["LangChain", "OpenAI", "Pinecone"],
+      "image": "",
+      "demo_url": "#",
+      "github_url": "#",
+      "featured": false
+    },
+    {
+      "title": "Image Caption Generator",
+      "category": "nlp",
+      "description": "CNN-RNN hybrid model generating natural-language image captions.",
+      "stack": ["PyTorch", "CNN", "LSTM"],
+      "image": "",
+      "demo_url": "#",
+      "github_url": "#",
+      "featured": false
+    },
+    {
+      "title": "Stock Volatility Analyzer",
+      "category": "ml",
+      "description": "Statistical + ML model estimating short-term stock volatility.",
+      "stack": ["Python", "GARCH", "scikit-learn"],
+      "image": "",
+      "demo_url": "#",
+      "github_url": "#",
+      "featured": false
+    },
+    {
+      "title": "Movie Recommendation Engine",
+      "category": "ml",
+      "description": "Collaborative-filtering recommender with cold-start handling.",
+      "stack": ["Surprise", "Pandas", "Flask"],
+      "image": "",
+      "demo_url": "#",
+      "github_url": "#",
+      "featured": false
+    },
+    {
+      "title": "Air Quality Predictor",
+      "category": "viz",
+      "description": "Forecasting and visualizing urban air quality indices.",
+      "stack": ["Python", "Plotly", "Random Forest"],
+      "image": "",
+      "demo_url": "#",
+      "github_url": "#",
+      "featured": false
+    },
+    {
+      "title": "Resume-to-Portfolio Generator",
+      "category": "genai",
+      "description": "Tool converting structured resume data into a generated portfolio site.",
+      "stack": ["Node.js", "OpenAI API"],
+      "image": "",
+      "demo_url": "#",
+      "github_url": "#",
+      "featured": false
+    },
+    {
+      "title": "Fraud Detection Pipeline",
+      "category": "ml",
+      "description": "Real-time transaction fraud detection with anomaly scoring.",
+      "stack": ["Kafka", "Isolation Forest"],
+      "image": "",
+      "demo_url": "#",
+      "github_url": "#",
+      "featured": false
+    },
+    {
+      "title": "Twitter Trend Tracker",
+      "category": "nlp",
+      "description": "Real-time trend & sentiment tracking pipeline for social data.",
+      "stack": ["Tweepy", "NLTK", "Dash"],
+      "image": "",
+      "demo_url": "#",
+      "github_url": "#",
+      "featured": false
+    },
+    {
+      "title": "Exam Performance Predictor",
+      "category": "viz",
+      "description": "Predictive model & dashboard for student exam outcome trends.",
+      "stack": ["Python", "scikit-learn", "Power BI"],
+      "image": "",
+      "demo_url": "#",
+      "github_url": "#",
+      "featured": false
+    }
+  ]
+}

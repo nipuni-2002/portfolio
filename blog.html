@@ -23,6 +23,7 @@
       <li><a href="contact.html">Contact</a></li>
       <li><a href="contact.html" class="nav-cta">Let's talk →</a></li>
     </ul>
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode"><span class="knob"></span><span class="toggle-label">Light</span></button>
     <button class="nav-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
   </div>
 </nav>
@@ -38,38 +39,8 @@
 
 <section class="section-cream" style="padding-top:2rem;">
   <div class="wrap">
-    <div class="blog-grid reveal-stagger">
-
-      <article class="card blog-card">
-        <div class="thumb" style="aspect-ratio:16/10;background:linear-gradient(135deg,var(--maroon),var(--espresso));"></div>
-        <div class="body">
-          <span class="date">Draft — add date</span>
-          <h3>What SHAP values actually tell you (and what they don't)</h3>
-          <p>A practical look at model explainability beyond the headline plots.</p>
-          <span class="read">Read article →</span>
-        </div>
-      </article>
-
-      <article class="card blog-card">
-        <div class="thumb" style="aspect-ratio:16/10;background:linear-gradient(135deg,var(--terracotta),var(--maroon));"></div>
-        <div class="body">
-          <span class="date">Draft — add date</span>
-          <h3>Building my first RAG pipeline: lessons learned</h3>
-          <p>What broke, what worked, and what I'd do differently next time.</p>
-          <span class="read">Read article →</span>
-        </div>
-      </article>
-
-      <article class="card blog-card">
-        <div class="thumb" style="aspect-ratio:16/10;background:linear-gradient(135deg,var(--espresso),var(--gold-thread));"></div>
-        <div class="body">
-          <span class="date">Draft — add date</span>
-          <h3>Notes from a discrete mathematics deep-dive</h3>
-          <p>Why the math you skip in undergrad keeps showing up in ML.</p>
-          <span class="read">Read article →</span>
-        </div>
-      </article>
-
+    <div class="blog-grid" id="blog-grid">
+      <p style="font-family:var(--font-mono);font-size:.85rem;opacity:.55;padding:1rem 0;">Loading posts…</p>
     </div>
 
     <p class="lede text-center mt-2" style="margin-inline:auto;opacity:.7;">More articles coming soon — this page is wired up and ready for your first post.</p>
@@ -93,5 +64,6 @@
 </footer>
 
 <script src="js/main.js"></script>
+<script src="js/content.js"></script>
 </body>
 </html>

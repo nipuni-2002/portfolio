@@ -23,6 +23,7 @@
       <li><a href="contact.html">Contact</a></li>
       <li><a href="contact.html" class="nav-cta">Let's talk →</a></li>
     </ul>
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode"><span class="knob"></span><span class="toggle-label">Light</span></button>
     <button class="nav-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
   </div>
 </nav>
@@ -39,253 +40,15 @@
 <section class="section-cream" style="padding-top:2rem;">
   <div class="wrap">
     <div class="filter-bar reveal">
-      <button class="filter-btn active" data-filter="all">All (20)</button>
+      <button class="filter-btn active" data-filter="all"><span id="all-count">All</span></button>
       <button class="filter-btn" data-filter="ml">Machine Learning</button>
       <button class="filter-btn" data-filter="nlp">NLP</button>
       <button class="filter-btn" data-filter="genai">Generative AI</button>
       <button class="filter-btn" data-filter="viz">Data Viz / Analytics</button>
     </div>
 
-    <div class="projects-grid reveal-stagger">
-      <article class="card project-card" data-category="ml">
-        <div class="thumb"><span class="cat">Machine Learning</span>
-          <svg viewBox="0 0 300 188" xmlns="http://www.w3.org/2000/svg"><path d="M10 150 Q80 40 150 100 T290 30" stroke="#F7F1E8" stroke-width="2" fill="none"/><circle cx="10" cy="150" r="4" fill="#F7F1E8"/><circle cx="150" cy="100" r="4" fill="#F7F1E8"/><circle cx="290" cy="30" r="4" fill="#F7F1E8"/></svg>
-        </div>
-        <div class="body">
-          <h3>Customer Churn Predictor</h3>
-          <p>Gradient-boosted model predicting subscription churn with SHAP-based explainability.</p>
-          <div class="stack"><span>Python</span><span>XGBoost</span><span>SHAP</span></div>
-          <div class="links"><a href="#">Live demo</a><a href="#">GitHub</a></div>
-        </div>
-      </article>
-
-      <article class="card project-card" data-category="nlp">
-        <div class="thumb"><span class="cat">NLP</span>
-          <svg viewBox="0 0 300 188" xmlns="http://www.w3.org/2000/svg"><rect x="20" y="40" width="40" height="40" fill="#F7F1E8" opacity=".7"/><rect x="80" y="80" width="40" height="40" fill="#F7F1E8" opacity=".9"/><rect x="140" y="50" width="40" height="40" fill="#F7F1E8" opacity=".6"/><rect x="200" y="100" width="40" height="40" fill="#F7F1E8" opacity=".8"/></svg>
-        </div>
-        <div class="body">
-          <h3>Sentiment Insight Engine</h3>
-          <p>Transformer-based sentiment & topic classifier for product reviews.</p>
-          <div class="stack"><span>BERT</span><span>FastAPI</span><span>Docker</span></div>
-          <div class="links"><a href="#">Live demo</a><a href="#">GitHub</a></div>
-        </div>
-      </article>
-
-      <article class="card project-card" data-category="viz">
-        <div class="thumb"><span class="cat">Data Viz / Analytics</span>
-          <svg viewBox="0 0 300 188" xmlns="http://www.w3.org/2000/svg"><rect x="30" y="100" width="24" height="60" fill="#F7F1E8"/><rect x="70" y="60" width="24" height="100" fill="#F7F1E8"/><rect x="110" y="120" width="24" height="40" fill="#F7F1E8"/><rect x="150" y="40" width="24" height="120" fill="#F7F1E8"/><rect x="190" y="80" width="24" height="80" fill="#F7F1E8"/></svg>
-        </div>
-        <div class="body">
-          <h3>Climate Trends Dashboard</h3>
-          <p>Interactive dashboard visualizing two decades of regional climate data.</p>
-          <div class="stack"><span>D3.js</span><span>Pandas</span><span>Plotly</span></div>
-          <div class="links"><a href="#">Live demo</a><a href="#">GitHub</a></div>
-        </div>
-      </article>
-
-      <article class="card project-card" data-category="genai">
-        <div class="thumb"><span class="cat">Generative AI</span>
-          <svg viewBox="0 0 300 188" xmlns="http://www.w3.org/2000/svg"><circle cx="150" cy="94" r="50" fill="none" stroke="#F7F1E8" stroke-width="1.5"/><circle cx="150" cy="94" r="30" fill="none" stroke="#F7F1E8" stroke-width="1.5"/><circle cx="150" cy="94" r="10" fill="#F7F1E8"/></svg>
-        </div>
-        <div class="body">
-          <h3>Document Q&A Assistant</h3>
-          <p>RAG pipeline for natural-language queries over large PDF archives.</p>
-          <div class="stack"><span>LangChain</span><span>Claude API</span><span>Pinecone</span></div>
-          <div class="links"><a href="#">Live demo</a><a href="#">GitHub</a></div>
-        </div>
-      </article>
-
-      <article class="card project-card" data-category="ml">
-        <div class="thumb"><span class="cat">Machine Learning</span>
-          <svg viewBox="0 0 300 188" xmlns="http://www.w3.org/2000/svg"><path d="M10 150 Q80 40 150 100 T290 30" stroke="#F7F1E8" stroke-width="2" fill="none"/><circle cx="10" cy="150" r="4" fill="#F7F1E8"/><circle cx="150" cy="100" r="4" fill="#F7F1E8"/><circle cx="290" cy="30" r="4" fill="#F7F1E8"/></svg>
-        </div>
-        <div class="body">
-          <h3>Energy Demand Forecaster</h3>
-          <p>Time-series forecasting for grid demand using LSTM and weather covariates.</p>
-          <div class="stack"><span>TensorFlow</span><span>LSTM</span><span>AWS</span></div>
-          <div class="links"><a href="#">Live demo</a><a href="#">GitHub</a></div>
-        </div>
-      </article>
-
-      <article class="card project-card" data-category="viz">
-        <div class="thumb"><span class="cat">Data Viz / Analytics</span>
-          <svg viewBox="0 0 300 188" xmlns="http://www.w3.org/2000/svg"><rect x="30" y="100" width="24" height="60" fill="#F7F1E8"/><rect x="70" y="60" width="24" height="100" fill="#F7F1E8"/><rect x="110" y="120" width="24" height="40" fill="#F7F1E8"/><rect x="150" y="40" width="24" height="120" fill="#F7F1E8"/><rect x="190" y="80" width="24" height="80" fill="#F7F1E8"/></svg>
-        </div>
-        <div class="body">
-          <h3>University Admissions Analytics</h3>
-          <p>Analysis pipeline uncovering enrollment trends for faculty planning.</p>
-          <div class="stack"><span>SQL</span><span>Power BI</span><span>Python</span></div>
-          <div class="links"><a href="#">Live demo</a><a href="#">GitHub</a></div>
-        </div>
-      </article>
-
-      <article class="card project-card" data-category="ml">
-        <div class="thumb"><span class="cat">Machine Learning</span>
-          <svg viewBox="0 0 300 188" xmlns="http://www.w3.org/2000/svg"><path d="M10 150 Q80 40 150 100 T290 30" stroke="#F7F1E8" stroke-width="2" fill="none"/><circle cx="10" cy="150" r="4" fill="#F7F1E8"/><circle cx="150" cy="100" r="4" fill="#F7F1E8"/><circle cx="290" cy="30" r="4" fill="#F7F1E8"/></svg>
-        </div>
-        <div class="body">
-          <h3>Resume Screening Classifier</h3>
-          <p>NLP-driven model ranking resumes against job descriptions fairly.</p>
-          <div class="stack"><span>scikit-learn</span><span>spaCy</span><span>Flask</span></div>
-          <div class="links"><a href="#">Live demo</a><a href="#">GitHub</a></div>
-        </div>
-      </article>
-
-      <article class="card project-card" data-category="nlp">
-        <div class="thumb"><span class="cat">NLP</span>
-          <svg viewBox="0 0 300 188" xmlns="http://www.w3.org/2000/svg"><rect x="20" y="40" width="40" height="40" fill="#F7F1E8" opacity=".7"/><rect x="80" y="80" width="40" height="40" fill="#F7F1E8" opacity=".9"/><rect x="140" y="50" width="40" height="40" fill="#F7F1E8" opacity=".6"/><rect x="200" y="100" width="40" height="40" fill="#F7F1E8" opacity=".8"/></svg>
-        </div>
-        <div class="body">
-          <h3>News Topic Clustering</h3>
-          <p>Unsupervised clustering of daily news into emergent topic groups.</p>
-          <div class="stack"><span>BERTopic</span><span>UMAP</span><span>Streamlit</span></div>
-          <div class="links"><a href="#">Live demo</a><a href="#">GitHub</a></div>
-        </div>
-      </article>
-
-      <article class="card project-card" data-category="viz">
-        <div class="thumb"><span class="cat">Data Viz / Analytics</span>
-          <svg viewBox="0 0 300 188" xmlns="http://www.w3.org/2000/svg"><rect x="30" y="100" width="24" height="60" fill="#F7F1E8"/><rect x="70" y="60" width="24" height="100" fill="#F7F1E8"/><rect x="110" y="120" width="24" height="40" fill="#F7F1E8"/><rect x="150" y="40" width="24" height="120" fill="#F7F1E8"/><rect x="190" y="80" width="24" height="80" fill="#F7F1E8"/></svg>
-        </div>
-        <div class="body">
-          <h3>Retail Demand Heatmaps</h3>
-          <p>Geo-visualized retail demand patterns across regional store networks.</p>
-          <div class="stack"><span>Folium</span><span>GeoPandas</span><span>Python</span></div>
-          <div class="links"><a href="#">Live demo</a><a href="#">GitHub</a></div>
-        </div>
-      </article>
-
-      <article class="card project-card" data-category="genai">
-        <div class="thumb"><span class="cat">Generative AI</span>
-          <svg viewBox="0 0 300 188" xmlns="http://www.w3.org/2000/svg"><circle cx="150" cy="94" r="50" fill="none" stroke="#F7F1E8" stroke-width="1.5"/><circle cx="150" cy="94" r="30" fill="none" stroke="#F7F1E8" stroke-width="1.5"/><circle cx="150" cy="94" r="10" fill="#F7F1E8"/></svg>
-        </div>
-        <div class="body">
-          <h3>AI Story Generator</h3>
-          <p>Fine-tuned generative model producing short stories from prompts.</p>
-          <div class="stack"><span>GPT fine-tune</span><span>PyTorch</span></div>
-          <div class="links"><a href="#">Live demo</a><a href="#">GitHub</a></div>
-        </div>
-      </article>
-
-      <article class="card project-card" data-category="ml">
-        <div class="thumb"><span class="cat">Machine Learning</span>
-          <svg viewBox="0 0 300 188" xmlns="http://www.w3.org/2000/svg"><path d="M10 150 Q80 40 150 100 T290 30" stroke="#F7F1E8" stroke-width="2" fill="none"/><circle cx="10" cy="150" r="4" fill="#F7F1E8"/><circle cx="150" cy="100" r="4" fill="#F7F1E8"/><circle cx="290" cy="30" r="4" fill="#F7F1E8"/></svg>
-        </div>
-        <div class="body">
-          <h3>Credit Risk Scoring Model</h3>
-          <p>Interpretable credit risk model balancing accuracy and fairness.</p>
-          <div class="stack"><span>LightGBM</span><span>Fairlearn</span></div>
-          <div class="links"><a href="#">Live demo</a><a href="#">GitHub</a></div>
-        </div>
-      </article>
-
-      <article class="card project-card" data-category="genai">
-        <div class="thumb"><span class="cat">Generative AI</span>
-          <svg viewBox="0 0 300 188" xmlns="http://www.w3.org/2000/svg"><circle cx="150" cy="94" r="50" fill="none" stroke="#F7F1E8" stroke-width="1.5"/><circle cx="150" cy="94" r="30" fill="none" stroke="#F7F1E8" stroke-width="1.5"/><circle cx="150" cy="94" r="10" fill="#F7F1E8"/></svg>
-        </div>
-        <div class="body">
-          <h3>Chatbot for Course FAQs</h3>
-          <p>Retrieval-augmented chatbot answering university course queries.</p>
-          <div class="stack"><span>LangChain</span><span>OpenAI</span><span>Pinecone</span></div>
-          <div class="links"><a href="#">Live demo</a><a href="#">GitHub</a></div>
-        </div>
-      </article>
-
-      <article class="card project-card" data-category="nlp">
-        <div class="thumb"><span class="cat">NLP</span>
-          <svg viewBox="0 0 300 188" xmlns="http://www.w3.org/2000/svg"><rect x="20" y="40" width="40" height="40" fill="#F7F1E8" opacity=".7"/><rect x="80" y="80" width="40" height="40" fill="#F7F1E8" opacity=".9"/><rect x="140" y="50" width="40" height="40" fill="#F7F1E8" opacity=".6"/><rect x="200" y="100" width="40" height="40" fill="#F7F1E8" opacity=".8"/></svg>
-        </div>
-        <div class="body">
-          <h3>Image Caption Generator</h3>
-          <p>CNN-RNN hybrid model generating natural-language image captions.</p>
-          <div class="stack"><span>PyTorch</span><span>CNN</span><span>LSTM</span></div>
-          <div class="links"><a href="#">Live demo</a><a href="#">GitHub</a></div>
-        </div>
-      </article>
-
-      <article class="card project-card" data-category="ml">
-        <div class="thumb"><span class="cat">Machine Learning</span>
-          <svg viewBox="0 0 300 188" xmlns="http://www.w3.org/2000/svg"><path d="M10 150 Q80 40 150 100 T290 30" stroke="#F7F1E8" stroke-width="2" fill="none"/><circle cx="10" cy="150" r="4" fill="#F7F1E8"/><circle cx="150" cy="100" r="4" fill="#F7F1E8"/><circle cx="290" cy="30" r="4" fill="#F7F1E8"/></svg>
-        </div>
-        <div class="body">
-          <h3>Stock Volatility Analyzer</h3>
-          <p>Statistical + ML model estimating short-term stock volatility.</p>
-          <div class="stack"><span>Python</span><span>GARCH</span><span>scikit-learn</span></div>
-          <div class="links"><a href="#">Live demo</a><a href="#">GitHub</a></div>
-        </div>
-      </article>
-
-      <article class="card project-card" data-category="ml">
-        <div class="thumb"><span class="cat">Machine Learning</span>
-          <svg viewBox="0 0 300 188" xmlns="http://www.w3.org/2000/svg"><path d="M10 150 Q80 40 150 100 T290 30" stroke="#F7F1E8" stroke-width="2" fill="none"/><circle cx="10" cy="150" r="4" fill="#F7F1E8"/><circle cx="150" cy="100" r="4" fill="#F7F1E8"/><circle cx="290" cy="30" r="4" fill="#F7F1E8"/></svg>
-        </div>
-        <div class="body">
-          <h3>Movie Recommendation Engine</h3>
-          <p>Collaborative-filtering recommender with cold-start handling.</p>
-          <div class="stack"><span>Surprise</span><span>Pandas</span><span>Flask</span></div>
-          <div class="links"><a href="#">Live demo</a><a href="#">GitHub</a></div>
-        </div>
-      </article>
-
-      <article class="card project-card" data-category="viz">
-        <div class="thumb"><span class="cat">Data Viz / Analytics</span>
-          <svg viewBox="0 0 300 188" xmlns="http://www.w3.org/2000/svg"><rect x="30" y="100" width="24" height="60" fill="#F7F1E8"/><rect x="70" y="60" width="24" height="100" fill="#F7F1E8"/><rect x="110" y="120" width="24" height="40" fill="#F7F1E8"/><rect x="150" y="40" width="24" height="120" fill="#F7F1E8"/><rect x="190" y="80" width="24" height="80" fill="#F7F1E8"/></svg>
-        </div>
-        <div class="body">
-          <h3>Air Quality Predictor</h3>
-          <p>Forecasting and visualizing urban air quality indices.</p>
-          <div class="stack"><span>Python</span><span>Plotly</span><span>Random Forest</span></div>
-          <div class="links"><a href="#">Live demo</a><a href="#">GitHub</a></div>
-        </div>
-      </article>
-
-      <article class="card project-card" data-category="genai">
-        <div class="thumb"><span class="cat">Generative AI</span>
-          <svg viewBox="0 0 300 188" xmlns="http://www.w3.org/2000/svg"><circle cx="150" cy="94" r="50" fill="none" stroke="#F7F1E8" stroke-width="1.5"/><circle cx="150" cy="94" r="30" fill="none" stroke="#F7F1E8" stroke-width="1.5"/><circle cx="150" cy="94" r="10" fill="#F7F1E8"/></svg>
-        </div>
-        <div class="body">
-          <h3>Resume-to-Portfolio Generator</h3>
-          <p>Tool converting structured resume data into a generated portfolio site.</p>
-          <div class="stack"><span>Node.js</span><span>OpenAI API</span></div>
-          <div class="links"><a href="#">Live demo</a><a href="#">GitHub</a></div>
-        </div>
-      </article>
-
-      <article class="card project-card" data-category="ml">
-        <div class="thumb"><span class="cat">Machine Learning</span>
-          <svg viewBox="0 0 300 188" xmlns="http://www.w3.org/2000/svg"><path d="M10 150 Q80 40 150 100 T290 30" stroke="#F7F1E8" stroke-width="2" fill="none"/><circle cx="10" cy="150" r="4" fill="#F7F1E8"/><circle cx="150" cy="100" r="4" fill="#F7F1E8"/><circle cx="290" cy="30" r="4" fill="#F7F1E8"/></svg>
-        </div>
-        <div class="body">
-          <h3>Fraud Detection Pipeline</h3>
-          <p>Real-time transaction fraud detection with anomaly scoring.</p>
-          <div class="stack"><span>Kafka</span><span>Isolation Forest</span></div>
-          <div class="links"><a href="#">Live demo</a><a href="#">GitHub</a></div>
-        </div>
-      </article>
-
-      <article class="card project-card" data-category="nlp">
-        <div class="thumb"><span class="cat">NLP</span>
-          <svg viewBox="0 0 300 188" xmlns="http://www.w3.org/2000/svg"><rect x="20" y="40" width="40" height="40" fill="#F7F1E8" opacity=".7"/><rect x="80" y="80" width="40" height="40" fill="#F7F1E8" opacity=".9"/><rect x="140" y="50" width="40" height="40" fill="#F7F1E8" opacity=".6"/><rect x="200" y="100" width="40" height="40" fill="#F7F1E8" opacity=".8"/></svg>
-        </div>
-        <div class="body">
-          <h3>Twitter Trend Tracker</h3>
-          <p>Real-time trend &amp; sentiment tracking pipeline for social data.</p>
-          <div class="stack"><span>Tweepy</span><span>NLTK</span><span>Dash</span></div>
-          <div class="links"><a href="#">Live demo</a><a href="#">GitHub</a></div>
-        </div>
-      </article>
-
-      <article class="card project-card" data-category="viz">
-        <div class="thumb"><span class="cat">Data Viz / Analytics</span>
-          <svg viewBox="0 0 300 188" xmlns="http://www.w3.org/2000/svg"><rect x="30" y="100" width="24" height="60" fill="#F7F1E8"/><rect x="70" y="60" width="24" height="100" fill="#F7F1E8"/><rect x="110" y="120" width="24" height="40" fill="#F7F1E8"/><rect x="150" y="40" width="24" height="120" fill="#F7F1E8"/><rect x="190" y="80" width="24" height="80" fill="#F7F1E8"/></svg>
-        </div>
-        <div class="body">
-          <h3>Exam Performance Predictor</h3>
-          <p>Predictive model &amp; dashboard for student exam outcome trends.</p>
-          <div class="stack"><span>Python</span><span>scikit-learn</span><span>Power BI</span></div>
-          <div class="links"><a href="#">Live demo</a><a href="#">GitHub</a></div>
-        </div>
-      </article>
+    <div class="projects-grid" id="all-projects-grid">
+      <p style="font-family:var(--font-mono);font-size:.85rem;opacity:.55;padding:1rem 0;">Loading all projects…</p>
     </div>
   </div>
 </section>
@@ -307,5 +70,6 @@
 </footer>
 
 <script src="js/main.js"></script>
+<script src="js/content.js"></script>
 </body>
 </html>

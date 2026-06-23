@@ -1,0 +1,130 @@
+backend:
+  name: git-gateway
+  branch: main
+
+# Where uploaded images are stored
+media_folder: assets/images/uploads
+public_folder: /assets/images/uploads
+
+# Show draft content in the editor
+publish_mode: editorial_workflow
+
+site_url: https://nipuni-portfolio.netlify.app
+display_url: https://nipuni-portfolio.netlify.app
+logo_url: /assets/images/neural-arch-logo-navbar.png
+
+collections:
+
+  # ─────────────────────────────────────────
+  # PROJECTS
+  # ─────────────────────────────────────────
+  - name: "projects"
+    label: "Projects"
+    label_singular: "Project"
+    files:
+      - label: "All Projects"
+        name: "projects"
+        file: "data/projects.json"
+        format: "json"
+        fields:
+          - label: "Projects"
+            name: "projects"
+            widget: "list"
+            summary: "{{fields.title}} — {{fields.category}}"
+            fields:
+              - {label: "Title", name: "title", widget: "string", hint: "e.g. Customer Churn Predictor"}
+              - label: "Category"
+                name: "category"
+                widget: "select"
+                options:
+                  - {label: "Machine Learning", value: "ml"}
+                  - {label: "NLP", value: "nlp"}
+                  - {label: "Generative AI", value: "genai"}
+                  - {label: "Data Viz / Analytics", value: "viz"}
+              - {label: "Short Description", name: "description", widget: "text", hint: "2–3 sentences shown on the card"}
+              - label: "Tech Stack Tags"
+                name: "stack"
+                widget: "list"
+                hint: "Add each tag separately (e.g. Python, TensorFlow, Pandas)"
+              - {label: "Project Image", name: "image", widget: "image", required: false, hint: "Leave blank to show a category illustration"}
+              - {label: "Live Demo URL", name: "demo_url", widget: "string", required: false, hint: "https://..."}
+              - {label: "GitHub URL", name: "github_url", widget: "string", required: false, hint: "https://github.com/..."}
+              - {label: "Show on Featured (Homepage)", name: "featured", widget: "boolean", default: false, hint: "Turn on to show this project on the home page and Projects page"}
+
+  # ─────────────────────────────────────────
+  # BLOG POSTS
+  # ─────────────────────────────────────────
+  - name: "blog"
+    label: "Blog Posts"
+    label_singular: "Blog Post"
+    files:
+      - label: "All Posts"
+        name: "blog"
+        file: "data/blog.json"
+        format: "json"
+        fields:
+          - label: "Posts"
+            name: "posts"
+            widget: "list"
+            summary: "{{fields.title}} ({{fields.date}})"
+            fields:
+              - {label: "Title", name: "title", widget: "string"}
+              - {label: "Date", name: "date", widget: "datetime", format: "YYYY-MM-DD", date_format: "DD MMM YYYY", time_format: false}
+              - {label: "Short Summary", name: "summary", widget: "text", hint: "Shown on the blog card — 1–2 sentences"}
+              - {label: "Full Content", name: "content", widget: "markdown", hint: "Full article body — supports headings, bold, images, etc."}
+              - {label: "Cover Image", name: "cover_image", widget: "image", required: false}
+              - {label: "Published", name: "published", widget: "boolean", default: false, hint: "Only published posts appear on the live site"}
+              - label: "Tags"
+                name: "tags"
+                widget: "list"
+                required: false
+                hint: "e.g. Machine Learning, NLP, Python"
+
+  # ─────────────────────────────────────────
+  # ABOUT PAGE
+  # ─────────────────────────────────────────
+  - name: "about"
+    label: "About & Profile"
+    files:
+      - label: "About Page Content"
+        name: "about"
+        file: "data/about.json"
+        format: "json"
+        fields:
+          - {label: "Home Page Bio (short)", name: "bio_home", widget: "text", hint: "Shown in the About teaser on the homepage"}
+          - {label: "About Page Bio (full)", name: "bio_about", widget: "text", hint: "Shown on the full About page"}
+          - label: "Focus Areas"
+            name: "focus_areas"
+            widget: "list"
+            hint: "e.g. Machine Learning, NLP — shown as pills"
+
+          - label: "Highlight Numbers"
+            name: "achievements"
+            widget: "list"
+            hint: "The 4 big-number cards (e.g. 20+ Projects)"
+            summary: "{{fields.num}} — {{fields.label}}"
+            fields:
+              - {label: "Number or Symbol", name: "num", widget: "string", hint: "e.g. 20+"}
+              - {label: "Label", name: "label", widget: "string", hint: "e.g. Projects built"}
+
+          - label: "Certifications"
+            name: "certifications"
+            widget: "list"
+            summary: "{{fields.name}}"
+            fields:
+              - {label: "Certificate Name", name: "name", widget: "string"}
+              - {label: "Issuing Platform / Institution", name: "issuer", widget: "string"}
+              - {label: "Date", name: "date", widget: "string", hint: "e.g. Jan 2025"}
+              - {label: "Description", name: "description", widget: "text"}
+              - {label: "Certificate URL", name: "url", widget: "string", required: false}
+
+          - label: "Education & Experience Timeline"
+            name: "timeline"
+            widget: "list"
+            summary: "{{fields.date}} — {{fields.title}}"
+            fields:
+              - {label: "Date Range", name: "date", widget: "string", hint: "e.g. 2025 — Present"}
+              - {label: "Title / Role", name: "title", widget: "string"}
+              - {label: "Organisation", name: "org", widget: "string"}
+              - {label: "Organisation URL", name: "org_link", widget: "string", required: false}
+              - {label: "Description", name: "description", widget: "text"}

@@ -1,0 +1,17 @@
+[build]
+  publish = "."
+
+# Make sure the admin panel always serves the index
+[[redirects]]
+  from = "/admin"
+  to   = "/admin/index.html"
+  status = 200
+
+# Clean 404 page
+[[redirects]]
+  from   = "/*"
+  to     = "/index.html"
+  status = 404
+
+[build.environment]
+  NODE_VERSION = "18"

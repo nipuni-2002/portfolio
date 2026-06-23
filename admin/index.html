@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Neural Arch — Admin</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0;}
+    body{background:#F7F1E8;font-family:'Space Grotesk',sans-serif;display:flex;align-items:center;justify-content:center;min-height:100vh;}
+    .splash{text-align:center;opacity:0;animation:fadeIn .8s ease .1s forwards;}
+    @keyframes fadeIn{to{opacity:1;}}
+    .splash img{width:80px;margin-bottom:1.2rem;}
+    .splash h1{font-size:1.4rem;color:#3B241C;margin-bottom:.4rem;}
+    .splash p{font-size:.88rem;color:#6E0D25;opacity:.75;}
+  </style>
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+</head>
+<body>
+  <div class="splash">
+    <img src="../assets/images/neural-arch-logo-navbar.png" alt="Neural Arch">
+    <h1>Neural Arch Admin</h1>
+    <p>Loading your dashboard…</p>
+  </div>
+  <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+</body>
+</html>

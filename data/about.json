@@ -1,0 +1,51 @@
+{
+  "bio_home": "An aspiring Data Scientist and AI Engineer passionate about machine learning, intelligent systems, and data-driven innovation. I build projects that turn complex data into practical, impactful solutions while continuously exploring the evolving world of AI.",
+  "bio_about": "I'm Don Nipuni Athale, an undergraduate in Information Technology specializing in Data Science, driven by a deep passion for Artificial Intelligence and intelligent systems. My work focuses on transforming complex data into meaningful insights, building machine learning models, and exploring the evolving frontiers of AI. Through continuous learning and hands-on projects, I aim to create solutions that bridge innovation, logic, and human impact.",
+  "focus_areas": [
+    "Machine Learning",
+    "Natural Language Processing",
+    "Data Analytics",
+    "Deep Learning",
+    "Generative AI",
+    "Predictive Modeling",
+    "Data Visualization"
+  ],
+  "achievements": [
+    {"num": "20+", "label": "Projects built"},
+    {"num": "6", "label": "Focus areas mastered"},
+    {"num": "3+", "label": "Years of hands-on learning"},
+    {"num": "∞", "label": "Curiosity for AI"}
+  ],
+  "certifications": [
+    {
+      "name": "Add your first certification here",
+      "issuer": "Issuing platform / institution",
+      "date": "Add date",
+      "description": "Short note on what the certification covered.",
+      "url": ""
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2025 — Present",
+      "title": "BSc (Hons) in Information Technology, Specializing in Data Science",
+      "org": "Sri Lanka Institute of Information Technology (SLIIT)",
+      "org_link": "https://www.sliit.lk/",
+      "description": "Core coursework spans Object-Oriented Programming, Discrete Mathematics, Machine Learning, Databases, and Statistics — with a growing focus on applied AI projects."
+    },
+    {
+      "date": "2025 — Present",
+      "title": "Independent Data Science & AI Projects",
+      "org": "Self-directed",
+      "org_link": "",
+      "description": "Designed and shipped 20+ end-to-end projects spanning ML, NLP, generative AI, and data visualization — see the full archive on the Projects page."
+    },
+    {
+      "date": "Ongoing",
+      "title": "Continuous Learning",
+      "org": "Online courses & research papers",
+      "org_link": "",
+      "description": "Staying current with the evolving frontiers of AI through structured courses, papers, and hands-on experimentation."
+    }
+  ]
+}

@@ -191,8 +191,38 @@ function initContactForm() {
   });
 }
 
+/* ---------- 8. Dark / light mode toggle ---------- */
+function initThemeToggle() {
+  const btn = document.getElementById('themeToggle');
+  if (!btn) return;
+
+  const knob = btn.querySelector('.knob');
+  const label = btn.querySelector('.toggle-label');
+
+  function applyTheme(theme) {
+    document.documentElement.setAttribute('data-theme', theme);
+    if (knob) knob.textContent = theme === 'dark' ? '🌙' : '☀️';
+    if (label) label.textContent = theme === 'dark' ? 'Light' : 'Dark';
+  }
+
+  // restore saved preference immediately
+  const saved = localStorage.getItem('na-theme') || 'light';
+  applyTheme(saved);
+
+  btn.addEventListener('click', () => {
+    const current = document.documentElement.getAttribute('data-theme');
+    const next = current === 'dark' ? 'light' : 'dark';
+    applyTheme(next);
+    localStorage.setItem('na-theme', next);
+  });
+}
+
 /* ---------- init ---------- */
 document.addEventListener('DOMContentLoaded', () => {
+  // apply saved theme immediately to prevent flash
+  const saved = localStorage.getItem('na-theme') || 'light';
+  document.documentElement.setAttribute('data-theme', saved);
+
   document.querySelectorAll('[data-neural-arch]').forEach((el) => {
     buildNeuralArch(el, {
       nodeCount: parseInt(el.dataset.nodes || '22', 10),
@@ -205,4 +235,5 @@ document.addEventListener('DOMContentLoaded', () => {
   initCursorGlow();
   initFilters();
   initContactForm();
+  initThemeToggle();
 });

@@ -23,6 +23,7 @@
       <li><a href="contact.html">Contact</a></li>
       <li><a href="contact.html" class="nav-cta">Let's talk →</a></li>
     </ul>
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode"><span class="knob"></span><span class="toggle-label">Light</span></button>
     <button class="nav-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
   </div>
 </nav>
@@ -73,25 +74,8 @@
         <h2 class="h2-display">Education &amp; Experience</h2>
       </div>
     </div>
-    <div class="timeline reveal" style="border-color:rgba(247,241,232,.18);">
-      <div class="t-item">
-        <span class="t-date">2025 — Present</span>
-        <h4 style="color:var(--cream);">BSc (Hons) in Information Technology, Specializing in Data Science</h4>
-        <span class="t-org" style="color:var(--cream);"><a href="https://www.sliit.lk/" target="_blank" rel="noopener" style="color:var(--terracotta-light);border-bottom:1px solid currentColor;">Sri Lanka Institute of Information Technology (SLIIT)</a></span>
-        <p style="color:var(--cream);">Core coursework spans Object-Oriented Programming, Discrete Mathematics, Machine Learning, Databases, and Statistics — with a growing focus on applied AI projects.</p>
-      </div>
-      <div class="t-item">
-        <span class="t-date">2025 — Present</span>
-        <h4 style="color:var(--cream);">Independent Data Science &amp; AI Projects</h4>
-        <span class="t-org" style="color:var(--cream);">Self-directed</span>
-        <p style="color:var(--cream);">Designed and shipped 20+ end-to-end projects spanning ML, NLP, generative AI, and data visualization — see the full archive on the Projects page.</p>
-      </div>
-      <div class="t-item">
-        <span class="t-date">Ongoing</span>
-        <h4 style="color:var(--cream);">Continuous Learning</h4>
-        <span class="t-org" style="color:var(--cream);">Online courses &amp; research papers</span>
-        <p style="color:var(--cream);">Staying current with the evolving frontiers of AI through structured courses, papers, and hands-on experimentation.</p>
-      </div>
+    <div class="timeline reveal" style="border-color:rgba(247,241,232,.18);" id="timeline">
+      <p style="color:var(--cream);opacity:.6;font-family:var(--font-mono);font-size:.82rem;">Loading timeline…</p>
     </div>
   </div>
 </section>
@@ -105,11 +89,8 @@
         <h2 class="h2-display">Achievements &amp; Highlights</h2>
       </div>
     </div>
-    <div class="highlights reveal-stagger">
-      <div class="highlight-card"><span class="num">01</span><span class="lbl">Add your award, hackathon win, or publication here</span></div>
-      <div class="highlight-card"><span class="num">02</span><span class="lbl">Add a certification or competitive placement</span></div>
-      <div class="highlight-card"><span class="num">03</span><span class="lbl">Add a notable project recognition</span></div>
-      <div class="highlight-card"><span class="num">04</span><span class="lbl">Add leadership or volunteer milestone</span></div>
+    <div class="highlights reveal-stagger" id="highlights-grid">
+      <div class="highlight-card" style="opacity:.4;"><span class="num">…</span><span class="lbl">Loading</span></div>
     </div>
   </div>
 </section>
@@ -123,19 +104,8 @@
         <h2 class="h2-display">Certifications</h2>
       </div>
     </div>
-    <div class="timeline reveal">
-      <div class="t-item">
-        <span class="t-date">Add date</span>
-        <h4>Certification name (e.g. "Machine Learning Specialization")</h4>
-        <span class="t-org">Issuing platform / institution</span>
-        <p>Short note on what the certification covered.</p>
-      </div>
-      <div class="t-item">
-        <span class="t-date">Add date</span>
-        <h4>Certification name</h4>
-        <span class="t-org">Issuing platform / institution</span>
-        <p>Short note on what the certification covered.</p>
-      </div>
+    <div class="timeline reveal" id="certifications">
+      <p style="opacity:.6;font-family:var(--font-mono);font-size:.82rem;">Loading certifications…</p>
     </div>
   </div>
 </section>
@@ -183,5 +153,6 @@
 </footer>
 
 <script src="js/main.js"></script>
+<script src="js/content.js"></script>
 </body>
 </html>
