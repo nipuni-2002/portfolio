@@ -126,9 +126,9 @@ document.addEventListener('DOMContentLoaded',()=>{
   const page=location.pathname.split('/').pop()||'index.html';
   console.log('[NA] page:',page);
   if(page==='index.html'||page===''){  loadFeaturedProjects('featured-projects'); loadAboutData(); }
-  if(page==='projects.html')          loadFeaturedProjects('featured-projects');
-  if(page==='all-projects.html')      loadAllProjects('all-projects-grid','all-count');
-  if(page==='blog.html')              loadBlogPosts('blog-grid');
-  if(page==='blog-post.html')         loadSinglePost();
-  if(page==='about.html')             loadAboutData();
+  if(page==='projects.html'||page==='projects')          loadFeaturedProjects('featured-projects');
+  if(page==='all-projects.html'||page==='all-projects')  loadAllProjects('all-projects-grid','all-count');
+  if(page==='blog.html'||page==='blog')                  loadBlogPosts('blog-grid');
+  if(page==='blog-post.html'||page==='blog-post')        loadSinglePost();
+  if(page==='about.html'||page==='about')                loadAboutData();
 });
