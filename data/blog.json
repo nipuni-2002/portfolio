@@ -1,6 +1,23 @@
 {
   "posts": [
     {
+      "published": true,
+      "title": "Why I Chose Data Science and AI: The Beginning of Neural Arch",
+      "summary": "Tracing the origins of curiosity, intelligence, and the journey into AI.",
+      "content": "Artificial intelligence has always fascinated me, not just because of what it can do, but because of what it reveals about intelligence itself. Behind every intelligent system lies data, patterns, and decisions, and that same curiosity is what led me into the world of Data Science.\n\nI have always been a fairly nonchalant student, but over time I began building the foundation for a passion-driven career path. Being an undergraduate in Information Technology helped me realize what truly connects me to everything I’m curious about. As I explored different paths, I discovered the one that felt most aligned with me, which ultimately became my reason for specializing in Data Science.\n\nAI has always been an ongoing concept in my mind. I wanted to understand what it truly is, and more importantly, the mechanisms behind this thing we call intelligence.\n\nThroughout my childhood, I had a deep passion for Mathematics. That passion naturally shaped my curiosity toward pattern recognition, prediction, and logical problem-solving. As I entered university, I began connecting those interests with technology, which deepened my excitement for areas like **Natural Language Processing (NLP), Generative AI, and intelligent systems**.\n\n**Neural Arch**—*Tracing the Arch of Intelligence*—is my personal brand. It represents my journey of understanding how intelligence forms, evolves, and can be recreated through data and machine learning. There’s also a personal layer to it: the initials **N.A.** reflect my own name, making it both a technical vision and a personal identity.\n\nThrough this blog, I’ll document my projects, experiments, lessons, and discoveries as I continue building my path in the world of AI and Data Science.\n\nThis is only the beginning.",
+      "date": "2026-06-23",
+      "cover_image": "/assets/images/uploads/1-blog.jpg",
+      "tags": [
+        "Data Science",
+        "Artificial Intelligence",
+        "Machine Learning",
+        "Neural Arch",
+        "Personal Journey",
+        "NLP",
+        "Generative AI"
+      ]
+    },
+    {
       "title": "What SHAP values actually tell you (and what they don't)",
       "date": "2026-06-01",
       "summary": "A practical look at model explainability beyond the headline plots — when SHAP helps, when it misleads, and what to pair it with.",
@@ -37,23 +54,6 @@
         "Mathematics",
         "Machine Learning",
         "Study Notes"
-      ]
-    },
-    {
-      "published": true,
-      "title": "Why I Chose Data Science and AI: The Beginning of Neural Arch",
-      "summary": "Tracing the origins of curiosity, intelligence, and the journey into AI.",
-      "content": "Artificial intelligence has always fascinated me, not just because of what it can do, but because of what it reveals about intelligence itself. Behind every intelligent system lies data, patterns, and decisions, and that same curiosity is what led me into the world of Data Science.\n\nI have always been a fairly nonchalant student, but over time I began building the foundation for a passion-driven career path. Being an undergraduate in Information Technology helped me realize what truly connects me to everything I’m curious about. As I explored different paths, I discovered the one that felt most aligned with me, which ultimately became my reason for specializing in Data Science.\n\nAI has always been an ongoing concept in my mind. I wanted to understand what it truly is, and more importantly, the mechanisms behind this thing we call intelligence.\n\nThroughout my childhood, I had a deep passion for Mathematics. That passion naturally shaped my curiosity toward pattern recognition, prediction, and logical problem-solving. As I entered university, I began connecting those interests with technology, which deepened my excitement for areas like **Natural Language Processing (NLP), Generative AI, and intelligent systems**.\n\n**Neural Arch**—*Tracing the Arch of Intelligence*—is my personal brand. It represents my journey of understanding how intelligence forms, evolves, and can be recreated through data and machine learning. There’s also a personal layer to it: the initials **N.A.** reflect my own name, making it both a technical vision and a personal identity.\n\nThrough this blog, I’ll document my projects, experiments, lessons, and discoveries as I continue building my path in the world of AI and Data Science.\n\nThis is only the beginning.",
-      "date": "2026-06-23",
-      "cover_image": "/assets/images/uploads/1-blog.jpg",
-      "tags": [
-        "Data Science",
-        "Artificial Intelligence",
-        "Machine Learning",
-        "Neural Arch",
-        "Personal Journey",
-        "NLP",
-        "Generative AI"
       ]
     }
   ]
