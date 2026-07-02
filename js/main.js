@@ -181,48 +181,54 @@ function initContactForm() {
   const form = document.querySelector('#contact-form');
   if (!form) return;
   const status = document.querySelector('.form-status');
-  form.addEventListener('submit', (e) => {
+  const submitBtn = form.querySelector('button[type="submit"]');
+
+  form.addEventListener('submit', async (e) => {
     e.preventDefault();
-    // NOTE: wire this up to Formspree / EmailJS / your own backend.
-    // See README.md "Contact form" section for setup steps.
-    status.textContent = 'Message captured locally — connect a form service to send this for real (see README).';
-    status.classList.add('ok');
-    form.reset();
-  });
-}
 
-/* ---------- 8. Dark / light mode toggle ---------- */
-function initThemeToggle() {
-  const btn = document.getElementById('themeToggle');
-  if (!btn) return;
+    // ── Replace YOUR_FORM_ID with your actual Formspree ID (see setup steps below) ──
+    const FORMSPREE_ID = 'xeebpqaz';
 
-  const knob = btn.querySelector('.knob');
-  const label = btn.querySelector('.toggle-label');
+    if (FORMSPREE_ID === 'YOUR_FORM_ID') {
+      status.textContent = '⚠ Form not connected yet — see setup instructions.';
+      status.className = 'form-status err';
+      return;
+    }
 
-  function applyTheme(theme) {
-    document.documentElement.setAttribute('data-theme', theme);
-    if (knob) knob.textContent = theme === 'dark' ? '🌙' : '☀️';
-    if (label) label.textContent = theme === 'dark' ? 'Light' : 'Dark';
-  }
+    // Loading state
+    const originalText = submitBtn.textContent;
+    submitBtn.textContent = 'Sending…';
+    submitBtn.disabled = true;
+    status.textContent = '';
+    status.className = 'form-status';
 
-  // restore saved preference immediately
-  const saved = localStorage.getItem('na-theme') || 'light';
-  applyTheme(saved);
+    try {
+      const res = await fetch(`https://formspree.io/f/${FORMSPREE_ID}`, {
+        method: 'POST',
+        headers: { 'Accept': 'application/json' },
+        body: new FormData(form)
+      });
 
-  btn.addEventListener('click', () => {
-    const current = document.documentElement.getAttribute('data-theme');
-    const next = current === 'dark' ? 'light' : 'dark';
-    applyTheme(next);
-    localStorage.setItem('na-theme', next);
+      if (res.ok) {
+        status.textContent = '✅ Message sent! I\'ll get back to you soon.';
+        status.className = 'form-status ok';
+        form.reset();
+      } else {
+        const data = await res.json();
+        throw new Error(data?.errors?.[0]?.message || 'Something went wrong.');
+      }
+    } catch (err) {
+      status.textContent = '❌ ' + err.message + ' — try emailing me directly at dnkathale.work@gmail.com';
+      status.className = 'form-status err';
+    } finally {
+      submitBtn.textContent = originalText;
+      submitBtn.disabled = false;
+    }
   });
 }
 
 /* ---------- init ---------- */
 document.addEventListener('DOMContentLoaded', () => {
-  // apply saved theme immediately to prevent flash
-  const saved = localStorage.getItem('na-theme') || 'light';
-  document.documentElement.setAttribute('data-theme', saved);
-
   document.querySelectorAll('[data-neural-arch]').forEach((el) => {
     buildNeuralArch(el, {
       nodeCount: parseInt(el.dataset.nodes || '22', 10),
@@ -235,5 +241,4 @@ document.addEventListener('DOMContentLoaded', () => {
   initCursorGlow();
   initFilters();
   initContactForm();
-  initThemeToggle();
 });
